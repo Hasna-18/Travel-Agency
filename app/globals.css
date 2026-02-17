@@ -4,37 +4,117 @@
   --font-sans: "Inter", "system-ui", "sans-serif";
 }
 
+/* Ocean Theme Color Palette */
 :root {
+  /* Primary Deep Blue (Ocean Depth) - Dark, stable, corporate */
+  --ocean-deep: #0F3D5E;
+  
+  /* Tropical Blue (Main Brand Blue) - Strong but not neon */
+  --tropical-blue: #0077B6;
+  
+  /* Sea Blue (Lighter Accent) - Modern, fresh */
+  --sea-blue: #00B4D8;
+  
+  /* Seafoam Tint (Soft Background Blue) - Very light blue */
+  --seafoam-tint: #CAF0F8;
+  
+  /* Cool Grey (Professional Neutral) - Body text, secondary elements */
+  --cool-grey: #64748B;
+  
+  /* Light Grey Background */
+  --light-grey-bg: #F1F5F9;
+  
+  /* Pure White */
+  --pure-white: #FFFFFF;
+  
+  /* Legacy variables for compatibility */
   --background: #ffffff;
-  --foreground: #0f172a;
+  --foreground: #0F3D5E;
 }
 
 html {
   scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
+  overflow-x: hidden;
 }
 
+/* Glass Navigation with Ocean Theme */
 .glass-nav {
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(15, 61, 94, 0.08);
+  transition: all 0.3s ease;
 }
 
+/* Ocean Gradient Text */
 .text-gradient {
-  background: linear-gradient(135deg, #0f172a 0%, #334155 100%);
+  background: linear-gradient(135deg, var(--tropical-blue) 0%, var(--sea-blue) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
+/* Primary Button with Ocean Theme */
 .btn-primary {
-  @apply bg-slate-900 text-white px-6 py-3 rounded-full font-medium hover:bg-slate-800 transition-all duration-300 shadow-lg shadow-slate-200;
+  @apply bg-[#0077B6] text-white px-6 py-3 rounded-full font-medium hover:bg-[#0F3D5E] transition-all duration-300 shadow-lg;
+  box-shadow: 0 10px 30px rgba(0, 119, 182, 0.2);
 }
 
+.btn-primary:hover {
+  box-shadow: 0 15px 40px rgba(15, 61, 94, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Luxury Card with Ocean Theme */
 .card-luxury {
-  @apply bg-white border border-slate-100 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2;
+  @apply bg-white border border-[#CAF0F8] rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2;
+}
+
+.card-luxury:hover {
+  border-color: var(--sea-blue);
+  box-shadow: 0 20px 60px rgba(0, 180, 216, 0.15);
+}
+
+/* Mobile-First Responsive Utilities */
+@media (max-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+  
+  .glass-nav {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+}
+
+/* Performance Optimizations */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Smooth transitions for all interactive elements */
+button, a, input, textarea, select {
+  transition: all 0.3s ease;
+}
+
+/* Focus states for accessibility */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--sea-blue);
+  outline-offset: 2px;
 }
