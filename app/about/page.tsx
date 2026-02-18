@@ -167,12 +167,27 @@ export default function AboutPage() {
                                 </div>
                                 <div className="flex flex-col sm:flex-row gap-4 sm:gap-8">
                                     <div>
-                                        <p className="text-xs text-[#CAF0F8] uppercase font-bold">Call Us</p>
-                                        <p className="text-base sm:text-lg font-bold tracking-tight whitespace-nowrap">
-                                            +91 8606904047
+                                        <p className="text-xs text-[#CAF0F8] uppercase font-bold mb-2">
+                                            Call Us
                                         </p>
 
+                                        <div className="flex flex-col gap-1">
+                                            <a
+                                                href="tel:+919746170832"
+                                                className="text-base sm:text-lg font-bold tracking-tight whitespace-nowrap hover:underline"
+                                            >
+                                                +91 9746170832
+                                            </a>
+
+                                            <a
+                                                href="tel:+918606904047"
+                                                className="text-base sm:text-lg font-bold tracking-tight whitespace-nowrap hover:underline"
+                                            >
+                                                +91 8606904047
+                                            </a>
+                                        </div>
                                     </div>
+
                                     <div>
                                         <p className="text-xs text-[#CAF0F8] uppercase font-bold">Email</p>
                                         <p className="text-base sm:text-lg">futureflyglobalventures@gmail.com </p>

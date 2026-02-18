@@ -34,9 +34,13 @@ export default function ContactPage() {
                                 <ContactInfoItem
                                     icon={<Phone className="w-5 h-5 sm:w-6 sm:h-6 text-[#0077B6]" />}
                                     title="Call Our Experts"
-                                    content="(+91) 8606904047"
+                                    content={[
+                                        "+91 9746170832",
+                                        "+91 8606904047"
+                                    ]}
                                     subtext="Mon - Sat, 9am - 6pm"
                                 />
+
                                 <ContactInfoItem
                                     icon={<Mail className="w-5 h-5 sm:w-6 sm:h-6 text-[#0077B6]" />}
                                     title="Email Us"
@@ -127,16 +131,59 @@ export default function ContactPage() {
     );
 }
 
-function ContactInfoItem({ icon, title, content, subtext }: { icon: React.ReactNode, title: string, content: string, subtext: string }) {
+// function ContactInfoItem({ icon, title, content, subtext }: { icon: React.ReactNode, title: string, content: string, subtext: string }) {
+//     return (
+//         <div className="flex gap-4 sm:gap-6 items-start group">
+//             <div className="w-12 h-12 sm:w-14 sm:h-14 bg-white rounded-xl sm:rounded-2xl flex items-center justify-center border border-[#CAF0F8] shadow-sm flex-shrink-0 group-hover:border-[#00B4D8] group-hover:bg-[#CAF0F8]/30 transition-all">
+//                 {icon}
+//             </div>
+//             <div>
+//                 <h4 className="font-bold text-[#0F3D5E] mb-0.5">{title}</h4>
+//                 <p className="text-[#0077B6] font-medium text-base sm:text-lg mb-0.5">{content}</p>
+//                 <p className="text-[#64748B] text-sm">{subtext}</p>
+//             </div>
+//         </div>
+//     );
+// }
+function ContactInfoItem({
+    icon,
+    title,
+    content,
+    subtext
+}: {
+    icon: React.ReactNode,
+    title: string,
+    content: string | string[],
+    subtext: string
+}) {
     return (
         <div className="flex gap-4 sm:gap-6 items-start group">
             <div className="w-12 h-12 sm:w-14 sm:h-14 bg-white rounded-xl sm:rounded-2xl flex items-center justify-center border border-[#CAF0F8] shadow-sm flex-shrink-0 group-hover:border-[#00B4D8] group-hover:bg-[#CAF0F8]/30 transition-all">
                 {icon}
             </div>
+
             <div>
-                <h4 className="font-bold text-[#0F3D5E] mb-0.5">{title}</h4>
-                <p className="text-[#0077B6] font-medium text-base sm:text-lg mb-0.5">{content}</p>
-                <p className="text-[#64748B] text-sm">{subtext}</p>
+                <h4 className="font-bold text-[#0F3D5E] mb-1">{title}</h4>
+
+                <div className="flex flex-col gap-1">
+                    {Array.isArray(content) ? (
+                        content.map((item, index) => (
+                            <a
+                                key={index}
+                                href={`tel:${item.replace(/\s/g, "")}`}
+                                className="text-[#0077B6] font-medium text-base sm:text-lg whitespace-nowrap hover:underline"
+                            >
+                                {item}
+                            </a>
+                        ))
+                    ) : (
+                        <p className="text-[#0077B6] font-medium text-base sm:text-lg whitespace-nowrap">
+                            {content}
+                        </p>
+                    )}
+                </div>
+
+                <p className="text-[#64748B] text-sm mt-1">{subtext}</p>
             </div>
         </div>
     );

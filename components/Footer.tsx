@@ -56,13 +56,36 @@ export default function Footer() {
                             Contact
                         </h4>
                         <div className="space-y-2 sm:space-y-3 text-sm text-[#64748B]">
-                            <p>📞 (+91) 8606904047</p>
-                            <p>✉️ futureflyglobalventures@gmail.com</p>
+
+                            <div className="flex flex-col gap-1">
+                                <a
+                                    href="tel:+919746170832"
+                                    className="whitespace-nowrap hover:text-[#0077B6] transition-colors"
+                                >
+                                    +91 9746170832
+                                </a>
+
+                                <a
+                                    href="tel:+918606904047"
+                                    className="whitespace-nowrap hover:text-[#0077B6] transition-colors"
+                                >
+                                    +91 8606904047
+                                </a>
+                            </div>
+
+                            <a
+                                href="mailto:futureflyglobalventures@gmail.com"
+                                className="hover:text-[#0077B6] transition-colors block"
+                            >
+                                ✉️ futureflyglobalventures@gmail.com
+                            </a>
+
                             <p>
-                                Shop No.06, Attipra Zonal Office Building,
+                                Shop No.06, Attipra Zonal Office Building,<br />
                                 Kulathoor, Trivandrum, Kerala
                             </p>
                         </div>
+
                     </div>
                 </div>
 
