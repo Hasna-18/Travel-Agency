@@ -57,7 +57,7 @@ export default function Footer() {
                         </h4>
                         <div className="space-y-2 sm:space-y-3 text-sm text-[#64748B]">
                             <p>📞 (+91) 8606904047</p>
-                            <p>✉️ futureflytravels369@gmail.com</p>
+                            <p>✉️ futureflyglobalventures@gmail.com</p>
                             <p>
                                 Shop No.06, Attipra Zonal Office Building,
                                 Kulathoor, Trivandrum, Kerala

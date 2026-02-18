@@ -169,13 +169,13 @@ export default function AboutPage() {
                                     <div>
                                         <p className="text-xs text-[#CAF0F8] uppercase font-bold">Call Us</p>
                                         <p className="text-base sm:text-lg font-bold tracking-tight whitespace-nowrap">
-  +91 8606904047
-</p>
+                                            +91 8606904047
+                                        </p>
 
                                     </div>
                                     <div>
                                         <p className="text-xs text-[#CAF0F8] uppercase font-bold">Email</p>
-                                        <p className="text-base sm:text-lg">futureflytravels369@gmail.com </p>
+                                        <p className="text-base sm:text-lg">futureflyglobalventures@gmail.com </p>
                                     </div>
                                 </div>
                             </div>

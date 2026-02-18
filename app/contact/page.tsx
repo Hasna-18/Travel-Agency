@@ -40,7 +40,7 @@ export default function ContactPage() {
                                 <ContactInfoItem
                                     icon={<Mail className="w-5 h-5 sm:w-6 sm:h-6 text-[#0077B6]" />}
                                     title="Email Us"
-                                    content="futureflytravels369@gmail.com"
+                                    content="futureflyglobalventures@gmail.com"
                                     subtext="We reply within 24 hours"
                                 />
                                 <ContactInfoItem
