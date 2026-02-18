@@ -85,7 +85,7 @@ export default function AboutPage() {
                         <h2 className="text-2xl sm:text-3xl font-bold text-[#0F3D5E]">The Future Fly Advantage</h2>
                         <div className="space-y-4 sm:space-y-6 text-[#64748B] leading-relaxed">
                             <p>
-                                Backed by solid industry experience, we deliver end-to-end travel solutions designed around your unique needs. [cite: 3] Every itinerary is thoughtfully tailored to match your preferences, style, and budget. [cite: 5]
+                                Backed by solid industry experience, we deliver end-to-end travel solutions designed around your unique needs. Every itinerary is thoughtfully tailored to match your preferences, style, and budget
                             </p>
                             <p>
                                 Our customer-first approach, transparent pricing, and expert guidance ensure you have total confidence from the moment you start planning until you safely return home.
@@ -95,11 +95,11 @@ export default function AboutPage() {
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 pt-4">
                             <div className="p-5 sm:p-6 bg-[#F1F5F9] rounded-2xl sm:rounded-3xl border border-[#CAF0F8]">
                                 <p className="text-[#64748B] text-xs font-bold uppercase tracking-widest mb-2">Service Focus</p>
-                                <p className="text-[#0F3D5E] font-bold">Domestic & International [cite: 4]</p>
+                                <p className="text-[#0F3D5E] font-bold">Domestic & International </p>
                             </div>
                             <div className="p-5 sm:p-6 bg-[#F1F5F9] rounded-2xl sm:rounded-3xl border border-[#CAF0F8]">
                                 <p className="text-[#64748B] text-xs font-bold uppercase tracking-widest mb-2">Pricing</p>
-                                <p className="text-[#0F3D5E] font-bold">Transparent & Best-Value [cite: 14, 15]</p>
+                                <p className="text-[#0F3D5E] font-bold">Transparent & Best-Value </p>
                             </div>
                         </div>
                     </div>
@@ -143,12 +143,12 @@ export default function AboutPage() {
                             </p>
                             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                                 {[
-                                    "Flight & Hotel Reservations [cite: 4]",
-                                    "Airport Transfers [cite: 17]",
-                                    "Railway Reservations [cite: 19]",
-                                    "Local Travel Support [cite: 17]",
-                                    "Corporate Trip Planning [cite: 7]",
-                                    "Honeymoon Escapes [cite: 7]"
+                                    "Flight & Hotel Reservations",
+                                    "Airport Transfers",
+                                    "Railway Reservations",
+                                    "Local Travel Support",
+                                    "Corporate Trip Planning",
+                                    "Honeymoon Escapes"
                                 ].map((item, i) => (
                                     <li key={i} className="flex items-center gap-3 text-sm text-[#CAF0F8]">
                                         <div className="w-1.5 h-1.5 bg-[#00B4D8] rounded-full" />
