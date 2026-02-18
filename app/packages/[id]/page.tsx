@@ -50,7 +50,7 @@ export default function PackageDetailPage({ params }: { params: Promise<{ id: st
                                 >
                                     <ArrowLeft className="w-5 h-5" />
                                 </button>
-                                <span className="bg-blue-600 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest">
+                                <span className="bg-blue-500 px-3 py-2 rounded-full text-xs font-bold uppercase tracking-widest">
                                     {pkg.tag}
                                 </span>
                             </div>

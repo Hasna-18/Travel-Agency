@@ -162,14 +162,14 @@ export default function HeroSection() {
     };
 
     return (
-        <section className="relative w-full min-h-screen flex flex-col justify-center pt-20 pb-12 overflow-hidden bg-white">
+        <section className="relative w-full min-h-screen flex flex-col justify-center pt-28 sm:pt-32 lg:pt-36 pb-12 overflow-hidden bg-white">
 
             {/* Background Blobs with Ocean Theme */}
             <div className="absolute top-[-10%] right-[-5%] w-[400px] sm:w-[600px] h-[400px] sm:h-[600px] bg-[#CAF0F8] rounded-full blur-[120px] -z-10 opacity-60" />
             <div className="absolute bottom-[-10%] left-[-5%] w-[300px] sm:w-[400px] h-[300px] sm:h-[400px] bg-[#00B4D8]/20 rounded-full blur-[100px] -z-10 opacity-50" />
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 w-full">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 py-5 items-center">
 
                     {/* Left Content */}
                     <motion.div
@@ -183,9 +183,9 @@ export default function HeroSection() {
                         </div>
 
                         <h1 className="text-4xl sm:text-5xl lg:text-7xl font-serif italic text-[#0F3D5E] leading-[1.1] sm:leading-[1.05] mb-6 sm:mb-8">
-                            Travel Smarter. <br className="hidden sm:block" />
+                            Travel Smarter <br className="hidden sm:block" />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0077B6] to-[#00B4D8] not-italic font-sans font-black">
-                                Travel Better.
+                                Travel Better
                             </span>
                         </h1>
 

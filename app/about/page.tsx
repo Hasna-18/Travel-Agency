@@ -159,20 +159,20 @@ export default function AboutPage() {
                         </div>
 
                         <div className="bg-white/10 backdrop-blur-md rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-white/20">
-                            <h3 className="text-lg sm:text-xl font-bold mb-5 sm:mb-6">Get in Touch [cite: 22]</h3>
+                            <h3 className="text-lg sm:text-xl font-bold mb-5 sm:mb-6">Get in Touch </h3>
                             <div className="space-y-3 sm:space-y-4">
                                 <div>
                                     <p className="text-xs text-[#CAF0F8] uppercase font-bold">Location</p>
-                                    <p className="text-base sm:text-lg">Shop No.06, Attipra Zonal Office Building, Kulathoor, Trivandrum [cite: 25]</p>
+                                    <p className="text-base sm:text-lg">Shop No.06, Attipra Zonal Office Building, Kulathoor, Trivandrum </p>
                                 </div>
                                 <div className="flex flex-col sm:flex-row gap-4 sm:gap-8">
                                     <div>
                                         <p className="text-xs text-[#CAF0F8] uppercase font-bold">Call Us</p>
-                                        <p className="text-base sm:text-lg font-bold tracking-tight">(+91) 8606904047 [cite: 23]</p>
+                                        <p className="text-base sm:text-lg font-bold tracking-tight">+91 8606904047 </p>
                                     </div>
                                     <div>
                                         <p className="text-xs text-[#CAF0F8] uppercase font-bold">Email</p>
-                                        <p className="text-base sm:text-lg">futureflytravels369@gmail.com [cite: 24]</p>
+                                        <p className="text-base sm:text-lg">futureflytravels369@gmail.com </p>
                                     </div>
                                 </div>
                             </div>
