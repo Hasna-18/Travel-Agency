@@ -48,12 +48,7 @@ export default function Navbar() {
 
                 {/* Desktop Actions */}
                 <div className="hidden lg:flex items-center gap-4">
-                    <button className="text-sm font-medium text-[#64748B] hover:text-[#0077B6] transition-colors">
-                        Login
-                    </button>
-                    <button className="btn-primary text-sm px-6 py-2.5">
-                        Book Now
-                    </button>
+
                 </div>
 
                 {/* Mobile Menu Button */}
@@ -89,12 +84,7 @@ export default function Navbar() {
                                 </Link>
                             ))}
                             <div className="pt-4 space-y-3 border-t border-[#CAF0F8]">
-                                <button className="w-full text-center py-3 text-[#64748B] hover:text-[#0077B6] font-medium transition-colors">
-                                    Login
-                                </button>
-                                <button className="btn-primary w-full py-3">
-                                    Book Now
-                                </button>
+
                             </div>
                         </div>
                     </motion.div>
