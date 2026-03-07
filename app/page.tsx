@@ -63,9 +63,14 @@ export default function Home() {
               <p className="text-[#CAF0F8] text-base sm:text-lg mb-8 sm:mb-10">
                 Join over 50,000 travelers who have already experienced the difference with Future Fly Global Ventures.
               </p>
-              <button className="bg-white text-[#0F3D5E] px-8 sm:px-10 py-4 sm:py-5 rounded-full font-black hover:bg-[#CAF0F8] transition-all shadow-xl">
+              <a
+                href={`https://api.whatsapp.com/send/?phone=919746170832&text=${encodeURIComponent("Hi! I'd like to know more about your travel packages. Could you please share the details?")}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 bg-white text-[#0F3D5E] px-8 sm:px-10 py-4 sm:py-5 rounded-full font-black hover:bg-[#CAF0F8] transition-all shadow-xl"
+              >
                 Book a Consultation
-              </button>
+              </a>
             </motion.div>
           </div>
         </div>

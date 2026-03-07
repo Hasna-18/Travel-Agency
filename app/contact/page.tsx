@@ -1,9 +1,46 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Send, MessageSquare } from "lucide-react";
 
 export default function ContactPage() {
+    const [name, setName] = useState("");
+    const [phone, setPhone] = useState("");
+    const [email, setEmail] = useState("");
+    const [destination, setDestination] = useState("");
+    const [errors, setErrors] = useState<{ phone?: string; email?: string }>({});
+
+    const validate = () => {
+        const newErrors: { phone?: string; email?: string } = {};
+        const phoneRegex = /^[+]?[\d\s\-()]{7,15}$/;
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (phone.trim() && !phoneRegex.test(phone.trim())) {
+            newErrors.phone = "Please enter a valid mobile number.";
+        }
+        if (email.trim() && !emailRegex.test(email.trim())) {
+            newErrors.email = "Please enter a valid email address.";
+        }
+
+        setErrors(newErrors);
+        return Object.keys(newErrors).length === 0;
+    };
+
+    const handleSend = () => {
+        if (!validate()) return;
+
+        const lines = [];
+        if (name.trim()) lines.push(`👤 Name: ${name.trim()}`);
+        if (phone.trim()) lines.push(`📞 Phone: ${phone.trim()}`);
+        if (email.trim()) lines.push(`📧 Email: ${email.trim()}`);
+        if (destination.trim()) lines.push(`✈️ Dream Destination: ${destination.trim()}`);
+
+        const message = `Hi! I'd like to enquire about a travel package.\n\n${lines.join("\n")}`;
+        const encoded = encodeURIComponent(message);
+        window.open(`https://api.whatsapp.com/send/?phone=919746170832&text=${encoded}`, "_blank");
+    };
+
     return (
         <main className="bg-white pt-24 sm:pt-28 lg:pt-32 pb-16 sm:pb-20 lg:pb-24 overflow-hidden min-h-screen">
             {/* Background Subtle Accents */}
@@ -34,13 +71,9 @@ export default function ContactPage() {
                                 <ContactInfoItem
                                     icon={<Phone className="w-5 h-5 sm:w-6 sm:h-6 text-[#0077B6]" />}
                                     title="Call Our Experts"
-                                    content={[
-                                        "+91 9746170832",
-                                        "+91 8606904047"
-                                    ]}
+                                    content={["+91 9746170832", "+91 8606904047"]}
                                     subtext="Mon - Sat, 9am - 6pm"
                                 />
-
                                 <ContactInfoItem
                                     icon={<Mail className="w-5 h-5 sm:w-6 sm:h-6 text-[#0077B6]" />}
                                     title="Email Us"
@@ -73,12 +106,14 @@ export default function ContactPage() {
                                 <h2 className="text-xl sm:text-2xl font-bold text-[#0F3D5E]">Send a Message</h2>
                             </div>
 
-                            <form className="space-y-5 sm:space-y-6">
+                            <div className="space-y-5 sm:space-y-6">
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6">
                                     <div className="space-y-2">
                                         <label className="text-xs font-bold text-[#64748B] uppercase tracking-wider ml-1">Full Name</label>
                                         <input
                                             type="text"
+                                            value={name}
+                                            onChange={(e) => setName(e.target.value)}
                                             placeholder="Enter your name"
                                             className="w-full bg-[#F1F5F9]/50 border border-[#CAF0F8] rounded-xl sm:rounded-2xl px-5 sm:px-6 py-3 sm:py-4 text-[#0F3D5E] focus:outline-none focus:ring-2 focus:ring-[#0077B6]/20 focus:bg-white transition-all"
                                         />
@@ -87,9 +122,12 @@ export default function ContactPage() {
                                         <label className="text-xs font-bold text-[#64748B] uppercase tracking-wider ml-1">Phone Number</label>
                                         <input
                                             type="tel"
+                                            value={phone}
+                                            onChange={(e) => { setPhone(e.target.value); setErrors((p) => ({ ...p, phone: undefined })); }}
                                             placeholder="+91"
-                                            className="w-full bg-[#F1F5F9]/50 border border-[#CAF0F8] rounded-xl sm:rounded-2xl px-5 sm:px-6 py-3 sm:py-4 text-[#0F3D5E] focus:outline-none focus:ring-2 focus:ring-[#0077B6]/20 focus:bg-white transition-all"
+                                            className={`w-full bg-[#F1F5F9]/50 border rounded-xl sm:rounded-2xl px-5 sm:px-6 py-3 sm:py-4 text-[#0F3D5E] focus:outline-none focus:ring-2 focus:bg-white transition-all ${errors.phone ? "border-red-400 focus:ring-red-200" : "border-[#CAF0F8] focus:ring-[#0077B6]/20"}`}
                                         />
+                                        {errors.phone && <p className="text-red-500 text-xs ml-1">{errors.phone}</p>}
                                     </div>
                                 </div>
 
@@ -97,15 +135,20 @@ export default function ContactPage() {
                                     <label className="text-xs font-bold text-[#64748B] uppercase tracking-wider ml-1">Email Address</label>
                                     <input
                                         type="email"
+                                        value={email}
+                                        onChange={(e) => { setEmail(e.target.value); setErrors((p) => ({ ...p, email: undefined })); }}
                                         placeholder="example@mail.com"
-                                        className="w-full bg-[#F1F5F9]/50 border border-[#CAF0F8] rounded-xl sm:rounded-2xl px-5 sm:px-6 py-3 sm:py-4 text-[#0F3D5E] focus:outline-none focus:ring-2 focus:ring-[#0077B6]/20 focus:bg-white transition-all"
+                                        className={`w-full bg-[#F1F5F9]/50 border rounded-xl sm:rounded-2xl px-5 sm:px-6 py-3 sm:py-4 text-[#0F3D5E] focus:outline-none focus:ring-2 focus:bg-white transition-all ${errors.email ? "border-red-400 focus:ring-red-200" : "border-[#CAF0F8] focus:ring-[#0077B6]/20"}`}
                                     />
+                                    {errors.email && <p className="text-red-500 text-xs ml-1">{errors.email}</p>}
                                 </div>
 
                                 <div className="space-y-2">
                                     <label className="text-xs font-bold text-[#64748B] uppercase tracking-wider ml-1">Your Dream Destination</label>
                                     <textarea
                                         rows={4}
+                                        value={destination}
+                                        onChange={(e) => setDestination(e.target.value)}
                                         placeholder="Where would you like to go?"
                                         className="w-full bg-[#F1F5F9]/50 border border-[#CAF0F8] rounded-xl sm:rounded-2xl px-5 sm:px-6 py-3 sm:py-4 text-[#0F3D5E] focus:outline-none focus:ring-2 focus:ring-[#0077B6]/20 focus:bg-white transition-all resize-none"
                                     ></textarea>
@@ -113,13 +156,14 @@ export default function ContactPage() {
 
                                 <button
                                     type="button"
+                                    onClick={handleSend}
                                     className="w-full bg-[#0F3D5E] hover:bg-[#0077B6] text-white flex items-center justify-center gap-3 py-4 sm:py-5 rounded-xl sm:rounded-2xl text-base sm:text-lg font-bold transition-all shadow-xl group"
                                     style={{ boxShadow: '0 15px 40px rgba(15, 61, 94, 0.2)' }}
                                 >
-                                    Send Inquiry
+                                    Connect with Us
                                     <Send className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                                 </button>
-                            </form>
+                            </div>
                         </div>
 
                         {/* Decorative background shape */}
@@ -131,20 +175,6 @@ export default function ContactPage() {
     );
 }
 
-// function ContactInfoItem({ icon, title, content, subtext }: { icon: React.ReactNode, title: string, content: string, subtext: string }) {
-//     return (
-//         <div className="flex gap-4 sm:gap-6 items-start group">
-//             <div className="w-12 h-12 sm:w-14 sm:h-14 bg-white rounded-xl sm:rounded-2xl flex items-center justify-center border border-[#CAF0F8] shadow-sm flex-shrink-0 group-hover:border-[#00B4D8] group-hover:bg-[#CAF0F8]/30 transition-all">
-//                 {icon}
-//             </div>
-//             <div>
-//                 <h4 className="font-bold text-[#0F3D5E] mb-0.5">{title}</h4>
-//                 <p className="text-[#0077B6] font-medium text-base sm:text-lg mb-0.5">{content}</p>
-//                 <p className="text-[#64748B] text-sm">{subtext}</p>
-//             </div>
-//         </div>
-//     );
-// }
 function ContactInfoItem({
     icon,
     title,
@@ -161,10 +191,8 @@ function ContactInfoItem({
             <div className="w-12 h-12 sm:w-14 sm:h-14 bg-white rounded-xl sm:rounded-2xl flex items-center justify-center border border-[#CAF0F8] shadow-sm flex-shrink-0 group-hover:border-[#00B4D8] group-hover:bg-[#CAF0F8]/30 transition-all">
                 {icon}
             </div>
-
             <div>
                 <h4 className="font-bold text-[#0F3D5E] mb-1">{title}</h4>
-
                 <div className="flex flex-col gap-1">
                     {Array.isArray(content) ? (
                         content.map((item, index) => (
@@ -177,12 +205,11 @@ function ContactInfoItem({
                             </a>
                         ))
                     ) : (
-                        <p className="text-[#0077B6] font-medium text-base sm:text-lg whitespace-nowrap">
+                        <p className="text-[#0077B6] font-medium text-base sm:text-lg">
                             {content}
                         </p>
                     )}
                 </div>
-
                 <p className="text-[#64748B] text-sm mt-1">{subtext}</p>
             </div>
         </div>

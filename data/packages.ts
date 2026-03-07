@@ -6,6 +6,7 @@ export interface Package {
     rating: number;
     duration: string;
     image: string;
+    gallery?: string[];
     tag: string;
     description: string;
     highlights: string[];
@@ -15,111 +16,312 @@ export interface Package {
 
 export const packages: Package[] = [
     {
-        id: "maldives-overwater",
-        title: "Maldives Overwater Bliss",
-        location: "Maldives, Asia",
-        price: "₹29,499",
-        rating: 4.9,
-        duration: "7 Days",
-        image: "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&q=80&w=800",
-        tag: "Relaxation",
-        description: "Experience the ultimate luxury in our overwater villas. Wake up to the sound of the ocean and enjoy private access to crystal clear waters.",
-        highlights: ["Private Villa", "Snorkeling Equipment", "Daily Breakfast", "Spa Credits"],
-        itinerary: [
-            { day: 1, title: "Arrival", description: "Speedboat transfer to resort and welcome drinks." },
-            { day: 2, title: "Island Exploration", description: "Discover the local flora and fauna of the island." },
-            { day: 3, title: "Water Sports", description: "Enjoy kayaking, paddleboarding, and more." }
+        id: "sri-lanka",
+        title: "Sri Lanka Round Tour",
+        location: "Sri Lanka, Asia",
+        price: "Contact for Price",
+        rating: 4.8,
+        duration: "4 Days",
+        image: "https://images.unsplash.com/photo-1546708770-599a3abdf230?auto=format&fit=crop&q=100&w=1920",
+        gallery: [
+            "https://images.unsplash.com/photo-1588614959060-4d144f28b2ea?auto=format&fit=crop&q=100&w=1200",
+            "https://images.unsplash.com/photo-1578637387939-43c525550085?auto=format&fit=crop&q=100&w=1200",
+            "https://images.unsplash.com/photo-1620216654854-1590432128ce?auto=format&fit=crop&q=100&w=1200"
         ],
-        included: ["Flights", "Accommodation", "Transfers", "Guided Tours"]
+        tag: "Culture",
+        description: "Explore the beauty of Sri Lanka on a perfectly designed 3 Nights / 4 Days round tour that blends culture, nature, and coastal charm. From the sacred heritage city of Kandy to the cool tea-covered hills of Nuwara Eliya, the scenic landscapes of Ella, and the historic coastline near Galle.",
+        highlights: [
+            "Pinnawala Elephant Orphanage",
+            "Temple of the Sacred Tooth Relic",
+            "Tea Plantation & Factory Tour",
+            "Nine Arch Bridge",
+            "Little Adam's Peak Hike",
+            "Galle Fort Heritage Walk",
+            "Madu River Boat Safari",
+            "Turtle Hatchery Visit"
+        ],
+        itinerary: [
+            { day: 1, title: "Kandy Arrival", description: "Airport pickup, visit Pinnawala Elephant Orphanage, Temple of the Sacred Tooth Relic, and enjoy a Traditional Cultural Dance Performance." },
+            { day: 2, title: "Hill Country", description: "Explore Nuwara Eliya — visit Tea Plantation & Factory, relax at Gregory Lake, and enjoy Ramboda Falls." },
+            { day: 3, title: "Ella & Galle", description: "Scenic photography at Nine Arch Bridge, short hike to Little Adam's Peak, visit Rawana Falls, and heritage walk inside Galle Fort." },
+            { day: 4, title: "Colombo & Departure", description: "Madu River Boat Safari through mangroves, Turtle Hatchery Conservation Visit, Guided Colombo City Tour, and airport drop-off." }
+        ],
+        included: [
+            "3 Nights Accommodation (3★ / 4★ Hotels – Double Sharing)",
+            "Daily Breakfast & Dinner",
+            "Private Air-Conditioned Toyota Car",
+            "SLTDA Authorized English-Speaking Chauffeur",
+            "Highway Tolls & Parking Fees",
+            "Driver's Accommodation & Meals",
+            "Passenger Insurance Coverage",
+            "500ml Water Bottle per person per day",
+            "Airport Pickup & Drop-off"
+        ]
     },
     {
-        id: "swiss-alps",
-        title: "Swiss Alps Adventure",
-        location: "Zermatt, Switzerland",
-        price: "₹36,150",
+        id: "thailand",
+        title: "Thailand Island & City Explorer",
+        location: "Phuket, Krabi, Pattaya & Bangkok, Thailand",
+        price: "Contact for Price",
+        rating: 4.9,
+        duration: "8 Days",
+        image: "https://images.unsplash.com/photo-1506665531195-3566af2b4dfa?auto=format&fit=crop&q=100&w=1920",
+        gallery: [
+            "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&q=100&w=1200",
+            "https://images.unsplash.com/photo-1528181304800-259b08848526?auto=format&fit=crop&q=100&w=1200",
+            "https://images.unsplash.com/photo-1563492065599-3520f775eeed?auto=format&fit=crop&q=100&w=1200"
+        ],
+        tag: "Adventure",
+        description: "Experience the best of Thailand in 8 exciting days across Phuket, Krabi, Pattaya, and Bangkok. Enjoy stunning island tours, crystal-clear beaches, cultural landmarks, thrilling speedboat rides, and vibrant city experiences — all with comfortable stays and smooth transfers for a hassle-free getaway.",
+        highlights: [
+            "Phi Phi Island & Maya Bay",
+            "Four Islands Tour – Krabi",
+            "Coral Island (Koh Larn) – Pattaya",
+            "Bangkok Safari World & Marine Park",
+            "Big Buddha Phuket",
+            "Tiger Cave Temple",
+            "Floating Market – Pattaya",
+            "Tiger Park – Pattaya"
+        ],
+        itinerary: [
+            { day: 1, title: "Arrival in Phuket", description: "Airport pick-up and transfer to hotel. Evening Phuket City Tour including Big Buddha and scenic viewpoints." },
+            { day: 2, title: "Phi Phi Island", description: "Speedboat tour to Phi Phi Islands — visit Maya Bay, Pileh Lagoon, and enjoy snorkeling in crystal-clear waters. Lunch included." },
+            { day: 3, title: "Krabi", description: "Boat transfer to Krabi. Four Islands hopping — Phra Nang Cave Beach, Chicken Island, Poda Island. Lunch included." },
+            { day: 4, title: "Krabi City Tour", description: "Visit Tiger Cave Temple and scenic viewpoints across Krabi city." },
+            { day: 5, title: "Pattaya", description: "Transfer to Pattaya. Coral Island (Koh Larn) speedboat tour with lunch. Visit Floating Market and Tiger Park." },
+            { day: 6, title: "Pattaya City Tour", description: "Explore Pattaya city sights and local experiences." },
+            { day: 7, title: "Bangkok", description: "Transfer to Bangkok. Visit Safari World & Marine Park with a wildlife experience and lunch included." },
+            { day: 8, title: "Departure", description: "Bangkok city exploration and airport drop-off." }
+        ],
+        included: [
+            "7 Nights Accommodation (Phuket, Krabi, Pattaya & Bangkok)",
+            "Daily Breakfast",
+            "Lunch during Island Tours (Phi Phi, 4 Islands, Coral Island, Safari World)",
+            "Airport Pick-up & Drop-off",
+            "Phi Phi Island Tour with Lunch",
+            "Four Islands Tour (Krabi) with Lunch",
+            "Coral Island Tour (Koh Larn) with Lunch",
+            "Safari World Bangkok & Marine Park with Lunch",
+            "Phuket, Krabi & Pattaya City Tours",
+            "All transfers between Phuket, Krabi, Pattaya & Bangkok",
+            "Boat transfers (Phuket–Krabi & Island tours)"
+        ]
+    },
+    {
+        id: "lakshadweep",
+        title: "Lakshadweep Island Escape",
+        location: "Agatti Island, Lakshadweep",
+        price: "Contact for Price",
+        rating: 4.8,
+        duration: "4 Days",
+        image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=100&w=1920",
+        gallery: [
+            "https://images.unsplash.com/photo-1544558635-667480601430?auto=format&fit=crop&q=100&w=1200",
+            "https://images.unsplash.com/photo-1506461883276-594a12b11caf?auto=format&fit=crop&q=100&w=1200",
+            "https://images.unsplash.com/photo-1582967788606-a171c1080cb0?auto=format&fit=crop&q=100&w=1200"
+        ],
+        tag: "Relaxation",
+        description: "Experience the untouched beauty of Lakshadweep on this 3 Nights / 4 Days island escape covering Agatti Island and nearby pristine islands. Enjoy crystal-clear lagoons, white sandy beaches, snorkeling, scuba diving, glass boat rides, and relaxing seaside moments — all with comfortable A/C stay and delicious meals included.",
+        highlights: [
+            "Snorkeling in Crystal Lagoons",
+            "Scuba Diving",
+            "Kayaking",
+            "Glass Boat Rides",
+            "White Sandy Beaches",
+            "Agatti Island",
+            "Pristine Coral Reefs",
+            "Relaxing Seaside Moments"
+        ],
+        itinerary: [
+            { day: 1, title: "Arrival at Agatti", description: "Arrive at Agatti Island. Check-in, welcome orientation, and relaxing evening at the beach." },
+            { day: 2, title: "Water Adventures", description: "Snorkeling and glass boat ride over coral reefs. Explore the crystal-clear lagoons." },
+            { day: 3, title: "Scuba & Kayaking", description: "Scuba diving session and kayaking through the serene island waters." },
+            { day: 4, title: "Island Exploration & Departure", description: "Morning island walk, leisure time at the beach, and departure." }
+        ],
+        included: [
+            "Entry Permit",
+            "Transportation Tickets",
+            "Heritage Fees",
+            "Accommodation (Standard A/C Room)",
+            "Breakfast, Lunch & Dinner",
+            "All Entry Tickets",
+            "Snorkeling",
+            "Kayaking"
+        ]
+    },
+    {
+        id: "kerala",
+        title: "Kerala Scenic Getaway",
+        location: "Kerala, India",
+        price: "Contact for Price",
+        rating: 4.7,
+        duration: "5 Days",
+        image: "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&q=100&w=1920",
+        gallery: [
+            "https://images.unsplash.com/photo-1593693397690-362cb9666fc2?auto=format&fit=crop&q=100&w=1200",
+            "https://images.unsplash.com/photo-1596791552097-400d7da664fb?auto=format&fit=crop&q=100&w=1200",
+            "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&q=100&w=1200"
+        ],
+        tag: "Nature",
+        description: "Experience the beauty of Kerala with this perfectly crafted getaway featuring misty hills, serene backwaters, scenic beaches, and rich cultural charm. A relaxing and refreshing journey with comfortable stays and smooth sightseeing.",
+        highlights: [
+            "Vattavada Viewpoints & Strawberry Farm",
+            "Echo Point & Kundala Lake – Munnar",
+            "Mattupetty Dam",
+            "Evening Campfire at Munnar",
+            "Jeep Safari at Ramakalmedu",
+            "Periyar Wildlife Sanctuary",
+            "Houseboat Stay – Alappuzha",
+            "Backwater Speed Boat Ride"
+        ],
+        itinerary: [
+            { day: 1, title: "Vattavada", description: "Sightseeing at Vattavada — Viewpoints, Strawberry Farm & Waterfalls." },
+            { day: 2, title: "Munnar", description: "Explore Echo Point, Kundala Lake & Mattupetty Dam. Evening Campfire at Munnar." },
+            { day: 3, title: "Ramakalmedu & Thekkady", description: "Early Morning Jeep Safari & Off-road Adventure at Ramakalmedu. Visit Periyar Wildlife Sanctuary, Boating at Periyar Lake, and Spice Plantation Visit." },
+            { day: 4, title: "Thekkady Experiences", description: "Optional Kathakali / Kalaripayattu Show and exploration of local markets in Thekkady." },
+            { day: 5, title: "Alappuzha & Departure", description: "Houseboat Stay & Backwater Cruise in Alappuzha. Speed Boat Ride in Backwaters. Departure." }
+        ],
+        included: [
+            "Stay",
+            "Food",
+            "Entry Passes",
+            "Vehicle",
+            "Campfire",
+            "5 Activities"
+        ]
+    },
+    {
+        id: "kashmir",
+        title: "Kashmir – Heaven on Earth",
+        location: "Srinagar, Gulmarg, Pahalgam & Sonamarg, Kashmir",
+        price: "Contact for Price",
+        rating: 4.9,
+        duration: "12 Days",
+        image: "https://images.unsplash.com/photo-1566837945700-30057527ade0?auto=format&fit=crop&q=100&w=1920",
+        gallery: [
+            "https://images.unsplash.com/photo-1595815771614-ade9d652a65d?auto=format&fit=crop&q=100&w=1200",
+            "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&q=100&w=1200",
+            "https://images.unsplash.com/photo-1606112219348-185b3be2cbad?auto=format&fit=crop&q=100&w=1200"
+        ],
+        tag: "Adventure",
+        description: "Explore the stunning landscapes of Kashmir with this 12-day journey covering Srinagar, Gulmarg, Pahalgam, and Sonamarg. Enjoy Shikara rides, snow-capped mountains, beautiful valleys, and unforgettable Himalayan views — a complete 'Heaven on Earth' experience.",
+        highlights: [
+            "Srinagar – Dal Lake Shikara Ride",
+            "Gulmarg – Gondola Cable Car",
+            "Pahalgam Valley & Saffron Farm",
+            "Sonamarg Valley",
+            "Mughal Gardens – Nishat & Shalimar Bagh",
+            "Iconic Chenab Bridge Route",
+            "Jammu",
+            "Local Market Shopping"
+        ],
+        itinerary: [
+            { day: 1, title: "Departure from Kerala", description: "Kerala ↔ Kashmir Sleeper Class Train journey begins." },
+            { day: 2, title: "Arrival in Jammu", description: "Arrive Jammu and board Vande Bharat Train to Srinagar." },
+            { day: 3, title: "Srinagar", description: "Srinagar Airport / Railway Station pickup. Shikara Ride on Dal Lake. Visit Mughal Gardens — Nishat Bagh & Shalimar Bagh." },
+            { day: 4, title: "Gulmarg", description: "Day excursion to Gulmarg. Gondola (Cable Car) Ride – Phase 1. Enjoy snow-capped Himalayan views." },
+            { day: 5, title: "Pahalgam", description: "Valley sightseeing in Pahalgam — visit Saffron Farm & Apple Orchard." },
+            { day: 6, title: "Sonamarg", description: "Excursion to Sonamarg Valley. Scenic landscapes and glacier views." },
+            { day: 7, title: "Local Exploration", description: "Local market exploration & shopping in Srinagar." },
+            { day: 8, title: "Return Journey", description: "Departure from Srinagar. Scenic train journey including the iconic Chenab Bridge route (subject to availability)." }
+        ],
+        included: [
+            "Kerala ↔ Kashmir Up & Down Sleeper Class Train Tickets",
+            "Jammu – Srinagar Vande Bharat Train Tickets",
+            "5 Nights Accommodation",
+            "4 Days Sightseeing Transportation",
+            "Srinagar Airport / Railway Station Pickup & Drop",
+            "Daily Breakfast & Dinner",
+            "Dal Lake Shikara Ride",
+            "Gondola (Cable Car) Tickets – Phase 1",
+            "Mughal Garden Entry Tickets",
+            "All Toll Charges, Permits & Parking Fees",
+            "Malayali Tour Coordinator throughout the tour",
+            "Travel Insurance"
+        ]
+    },
+    {
+        id: "strangers-camp",
+        title: "Strangers Camp Kerala",
+        location: "Kerala, India",
+        price: "Contact for Price",
+        rating: 4.7,
+        duration: "3 Days",
+        image: "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&q=100&w=1920",
+        gallery: [
+            "https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?auto=format&fit=crop&q=100&w=1200",
+            "https://images.unsplash.com/photo-1525811902-f2342640856e?auto=format&fit=crop&q=100&w=1200",
+            "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&q=100&w=1200"
+        ],
+        tag: "Adventure",
+        description: "Experience an exciting and refreshing Strangers Camp in the heart of Kerala — where new friendships, adventure, and unforgettable memories come together. Set amidst scenic hills, beaches, or backwaters, this camp brings together like-minded travelers for fun activities, group games, campfires, music nights, and outdoor exploration.",
+        highlights: [
+            "Vattavada Hills",
+            "Wayanad",
+            "Varkala Beach",
+            "Amboori",
+            "Thekkady",
+            "Campfire & Music Nights",
+            "Group Games & Activities",
+            "Barbecue & Samudra Sadhya"
+        ],
+        itinerary: [
+            { day: 1, title: "Arrival & Icebreakers", description: "Arrive at camp location. Icebreaker group activities, settling in, tea & snacks, and evening campfire." },
+            { day: 2, title: "Adventure & Exploration", description: "Trekking and outdoor exploration. Group games, barbecue, and music night around the campfire." },
+            { day: 3, title: "Leisure & Departure", description: "Morning leisure, Samudra Sadhya (lunch feast), final group activities, and departure." }
+        ],
+        included: [
+            "Stay",
+            "Breakfast",
+            "Lunch (Samudra Sadhya)",
+            "Buffet Dinner",
+            "Barbecue",
+            "Campfire",
+            "Tea & Snacks",
+            "Trekking",
+            "Transport",
+            "All Activities"
+        ]
+    },
+    {
+        id: "devotion-trips",
+        title: "South India Devotion Trip",
+        location: "Kerala & Karnataka, India",
+        price: "Contact for Price",
         rating: 4.8,
         duration: "5 Days",
-        image: "https://images.unsplash.com/photo-1502784444187-359ac186c5bb?auto=format&fit=crop&q=80&w=800",
-        tag: "Adventure",
-        description: "A breathtaking journey through the heart of the Swiss Alps. Perfect for thrill-seekers and nature lovers alike.",
-        highlights: ["Skiing Pass", "Mountain Chalet Stay", "Alpine Dining", "Cable Car Tours"],
-        itinerary: [
-            { day: 1, title: "Arrival in Zurich", description: "Train journey to Zermatt with scenic views." },
-            { day: 2, title: "Matterhorn Visit", description: "Cable car ride to the highest station in Europe." },
-            { day: 3, title: "Glacier Trekking", description: "Guided walk on the Aletsch Glacier." }
+        image: "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&q=100&w=1920",
+        gallery: [
+            "https://images.unsplash.com/photo-1600010977281-22961e6fa9a8?auto=format&fit=crop&q=100&w=1200",
+            "https://images.unsplash.com/photo-1622308644420-b8fc4d1f21db?auto=format&fit=crop&q=100&w=1200",
+            "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&q=100&w=1200" 
         ],
-        included: ["Train Passes", "Hotel Stays", "Ski Equipment", "Local Guide"]
-    },
-    {
-        id: "santorini-sunset",
-        title: "Santorini Sunset Retreat",
-        location: "Oia, Greece",
-        price: "₹19,850",
-        rating: 4.9,
-        duration: "4 Days",
-        image: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&q=80&w=800",
-        tag: "Romantic",
-        description: "Iconic white-washed buildings and the world's most beautiful sunsets await you in Santorini.",
-        highlights: ["Ocean View Suite", "Yacht Cruise", "Wine Tasting", "Cooking Class"],
-        itinerary: [
-            { day: 1, title: "Sunset Dinner", description: "Welcome dinner overlooking the caldera." },
-            { day: 2, title: "Sailing", description: "Private yacht cruise around the volcanic islands." },
-            { day: 3, title: "Akrotiri Visit", description: "Explore the ancient Minoan city ruins." }
-        ],
-        included: ["Breakfast", "Yacht Tour", "Luxury Suite", "Transfers"]
-    },
-    {
-        id: "kyoto-heritage",
-        title: "Kyoto Heritage Tour",
-        location: "Kyoto, Japan",
-        price: "₹28,200",
-        rating: 4.7,
-        duration: "6 Days",
-        image: "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&q=80&w=800",
         tag: "Culture",
-        description: "Step back in time and experience the rich traditions and serene temples of Japan's ancient capital.",
-        highlights: ["Tea Ceremony", "Bamboo Forest Walk", "Temple Tours", "Geisha District"],
-        itinerary: [
-            { day: 1, title: "Kinkaku-ji", description: "Visit the world-famous Golden Pavilion." },
-            { day: 2, title: "Arashiyama", description: "Full day in the bamboo grove and monkey park." },
-            { day: 3, title: "Gion District", description: "Evening walk through the historical Geisha district." }
+        description: "A 4 Nights & 5 Days spiritual journey from Ernakulam covering Mookambika Temple, Kudajadri, Murudeshwar, Udupi, and Guruvayur. Perfect for families and devotional groups seeking temple darshan with scenic beauty and beach visits.",
+        highlights: [
+            "Mookambika Temple",
+            "Kudajadri Trekking",
+            "Murudeshwar Temple",
+            "Udupi Temple",
+            "Parassinikadavu Temple",
+            "Kozhikode Beach",
+            "Guruvayur Temple",
+            "Vadakkunathan Temple"
         ],
-        included: ["Temple Entries", "Local Guide", "Traditional Ryokan", "JR Pass"]
-    },
-    // {
-    //     id: "safari-expedition",
-    //     title: "Safari Expedition",
-    //     location: "Serengeti, Tanzania",
-    //     price: "₹4,500",
-    //     rating: 4.9,
-    //     duration: "10 Days",
-    //     image: "https://images.unsplash.com/photo-1516428990200-50897a5b149b?auto=format&fit=crop&q=80&w=800",
-    //     tag: "Wildlife",
-    //     description: "The ultimate wildlife experience. Witness the Great Migration and see the 'Big Five' in their natural habitat.",
-    //     highlights: ["Game Drives", "Luxury Tented Camp", "Hot Air Balloon", "Masai Village Visit"],
-    //     itinerary: [
-    //         { day: 1, title: "Arrival in Arusha", description: "Transfer to the Serengeti base camp." },
-    //         { day: 2, title: "Big Five Hunt", description: "Full day game drive across the plains." },
-    //         { day: 3, title: "Balloon Safari", description: "Sunrise flight over the Serengeti." }
-    //     ],
-    //     included: ["Eco-lodges", "All Meals", "Park Fees", "Specialist Guide"]
-    // },
-    {
-        id: "iceland-fire-ice",
-        title: "Icelandic Fire & Ice",
-        location: "Reykjavik, Iceland",
-        price: "₹30,299",
-        rating: 4.8,
-        duration: "8 Days",
-        image: "https://images.unsplash.com/photo-1476610182048-b716b8518aae?auto=format&fit=crop&q=80&w=800",
-        tag: "Nature",
-        description: "A land of waterfalls, glaciers, and volcanoes. Experience the raw power of nature in Iceland.",
-        highlights: ["Blue Lagoon", "Northern Lights", "Golden Circle", "Ice Cave Tour"],
         itinerary: [
-            { day: 1, title: "Blue Lagoon", description: "Relax in the geothermal spa after arrival." },
-            { day: 2, title: "Golden Circle", description: "Visit Gullfoss, Geysir, and Thingvellir." },
-            { day: 3, title: "South Coast", description: "Black sand beaches and towering waterfalls." }
+            { day: 1, title: "Departure from Ernakulam", description: "Pickup from Ernakulam and comfortable road journey toward Karnataka temples. Morning & Evening Aarti experience." },
+            { day: 2, title: "Mookambika & Kudajadri", description: "Temple Darshan at Mookambika. Kudajadri Trekking & Nature Viewpoints. Scenic photography at coastal locations." },
+            { day: 3, title: "Murudeshwar & Udupi", description: "Temple Darshan at Murudeshwar. Visit Malpe Beach. Temple Darshan at Udupi." },
+            { day: 4, title: "Parassinikadavu & Kozhikode", description: "Temple Darshan at Parassinikadavu. Visit Kozhikode Beach. Sightseeing and local market exploration." },
+            { day: 5, title: "Guruvayur & Return", description: "Temple Darshan at Guruvayur & Vadakkunathan. Drop-off at Ernakulam." }
         ],
-        included: ["4x4 Vehicle", "Boutique Hotels", "Glacier Gear", "Breakfast"]
+        included: [
+            "Pickup & Drop from Ernakulam",
+            "4 Nights Accommodation",
+            "Temple Visits & Sightseeing as per Itinerary",
+            "Beach Visits (Kozhikode & Malpe)",
+            "Comfortable Travel between Destinations",
+            "Tour Assistance"
+        ]
     }
 ];
