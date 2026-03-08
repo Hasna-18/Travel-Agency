@@ -244,7 +244,19 @@ export default function PackageDetailPage({ params }: { params: Promise<{ id: st
     return (
         <main className="bg-white pt-24">
             {/* Hero Header */}
-            <div className="relative h-[60vh] min-h-[400px] w-full">
+            <div className="relative h-[60vh] min-h-[400px] w-full bg-slate-900 overflow-hidden">
+                {/* Blurred Background */}
+                <div className="absolute inset-0 opacity-50">
+                    <Image
+                        src={pkg.image}
+                        alt={`${pkg.title} background`}
+                        fill
+                        className="object-cover blur-3xl scale-110"
+                        priority
+                    />
+                </div>
+                
+                {/* Main Foreground Image (Fully Visible) */}
                 <Image
                     src={pkg.image}
                     alt={pkg.title}
@@ -252,22 +264,23 @@ export default function PackageDetailPage({ params }: { params: Promise<{ id: st
                     className="object-cover"
                     priority
                 />
-                <div className="absolute inset-0 bg-black/30" />
+                
+                <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent" />
                 <div className="absolute inset-0 flex items-end">
-                    <div className="max-w-7xl mx-auto px-6 w-full pb-16">
+                    <div className="max-w-7xl mx-auto px-6 w-full pb-16 relative z-10">
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             className="text-white"
                         >
-                            <div className="flex gap-4 mb-6">
+                            <div className="flex items-center gap-4 mb-6">
                                 <button
                                     onClick={() => router.back()}
-                                    className="bg-white/20 backdrop-blur-md p-2 rounded-full hover:bg-white/40 transition-all"
+                                    className="bg-white/20 backdrop-blur-md w-10 h-10 flex items-center justify-center rounded-full hover:bg-white/40 transition-all border border-white/10 shadow-lg"
                                 >
-                                    <ArrowLeft className="w-5 h-5" />
+                                    <ArrowLeft className="w-5 h-5 text-white" />
                                 </button>
-                                <span className="bg-blue-500 px-3 py-2 rounded-full text-xs font-bold uppercase tracking-widest">
+                                <span className="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] border border-white/20 shadow-lg text-white">
                                     {pkg.tag}
                                 </span>
                             </div>
@@ -320,24 +333,40 @@ export default function PackageDetailPage({ params }: { params: Promise<{ id: st
                             </p>
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                                <div className="p-8 bg-slate-50 rounded-3xl border border-slate-100">
-                                    <h3 className="font-bold text-slate-900 mb-4">Highlights</h3>
-                                    <ul className="space-y-4">
+                                <div className="p-8 bg-linear-to-br from-blue-50/50 to-indigo-50/50 rounded-3xl border border-blue-100/60 shadow-[inset_0_4px_20px_rgba(255,255,255,0.8)] relative overflow-hidden group hover:shadow-xl hover:shadow-blue-900/5 transition-all duration-300">
+                                    <div className="absolute top-0 right-0 p-8 opacity-5 blur-xl group-hover:opacity-10 transition-opacity">
+                                        <Star className="w-40 h-40 text-blue-600" />
+                                    </div>
+                                    <div className="flex items-center gap-4 mb-8 relative z-10">
+                                        <div className="p-3 bg-white rounded-2xl shadow-lg shadow-blue-200/50 border border-blue-50">
+                                            <Star className="w-6 h-6 text-blue-600 fill-blue-600/20" />
+                                        </div>
+                                        <h3 className="text-xl font-bold text-slate-900">Highlights</h3>
+                                    </div>
+                                    <ul className="space-y-3 relative z-10">
                                         {pkg.highlights.map((h, i) => (
-                                            <li key={i} className="flex items-start gap-3">
-                                                <CheckCircle2 className="w-5 h-5 text-blue-600 mt-0.5" />
-                                                <span className="text-slate-600">{h}</span>
+                                            <li key={i} className="flex items-start gap-3 p-3 rounded-2xl hover:bg-white/80 transition-colors border border-transparent hover:border-white hover:shadow-sm group/item">
+                                                <CheckCircle2 className="w-5 h-5 text-blue-600 mt-0.5 shrink-0 group-hover/item:scale-110 transition-transform" />
+                                                <span className="text-slate-700 font-medium leading-relaxed">{h}</span>
                                             </li>
                                         ))}
                                     </ul>
                                 </div>
-                                <div className="p-8 bg-slate-50 rounded-3xl border border-slate-100">
-                                    <h3 className="font-bold text-slate-900 mb-4">What's Included</h3>
-                                    <ul className="space-y-4">
+                                <div className="p-8 bg-linear-to-br from-emerald-50/50 to-teal-50/50 rounded-3xl border border-emerald-100/60 shadow-[inset_0_4px_20px_rgba(255,255,255,0.8)] relative overflow-hidden group hover:shadow-xl hover:shadow-emerald-900/5 transition-all duration-300">
+                                    <div className="absolute top-0 right-0 p-8 opacity-5 blur-xl group-hover:opacity-10 transition-opacity">
+                                        <ShieldCheck className="w-40 h-40 text-emerald-600" />
+                                    </div>
+                                    <div className="flex items-center gap-4 mb-8 relative z-10">
+                                        <div className="p-3 bg-white rounded-2xl shadow-lg shadow-emerald-200/50 border border-emerald-50">
+                                            <ShieldCheck className="w-6 h-6 text-emerald-600" />
+                                        </div>
+                                        <h3 className="text-xl font-bold text-slate-900">What's Included</h3>
+                                    </div>
+                                    <ul className="space-y-3 relative z-10">
                                         {pkg.included.map((item, i) => (
-                                            <li key={i} className="flex items-start gap-3">
-                                                <CheckCircle2 className="w-5 h-5 text-green-500 mt-0.5" />
-                                                <span className="text-slate-600">{item}</span>
+                                            <li key={i} className="flex items-start gap-3 p-3 rounded-2xl hover:bg-white/80 transition-colors border border-transparent hover:border-white hover:shadow-sm group/item">
+                                                <CheckCircle2 className="w-5 h-5 text-emerald-600 mt-0.5 shrink-0 group-hover/item:scale-110 transition-transform" />
+                                                <span className="text-slate-700 font-medium leading-relaxed">{item}</span>
                                             </li>
                                         ))}
                                     </ul>

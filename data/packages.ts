@@ -22,11 +22,14 @@ export const packages: Package[] = [
         price: "Contact for Price",
         rating: 4.8,
         duration: "4 Days",
-        image: "https://images.unsplash.com/photo-1546708770-599a3abdf230?auto=format&fit=crop&q=100&w=1920",
+        image: "https://images.unsplash.com/photo-1612862862126-865765df2ded?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         gallery: [
-            "https://images.unsplash.com/photo-1588614959060-4d144f28b2ea?auto=format&fit=crop&q=100&w=1200",
-            "https://images.unsplash.com/photo-1578637387939-43c525550085?auto=format&fit=crop&q=100&w=1200",
-            "https://images.unsplash.com/photo-1620216654854-1590432128ce?auto=format&fit=crop&q=100&w=1200"
+            "https://images.unsplash.com/photo-1663674588375-67b278fe0506?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fENvbG9tYm8lMjBDaXR5fGVufDB8fDB8fHww",
+            "https://images.unsplash.com/photo-1619974643633-12acfdcedd16?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8TnV3YXJhJTIwRWxpeWF8ZW58MHx8MHx8fDI%3D",
+            "https://images.unsplash.com/photo-1678914903797-e775cf7a3571?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "https://images.unsplash.com/photo-1592905169881-eff95fe441ed?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8R2FsbGUlMjBGb3J0fGVufDB8fDB8fHwy",
+            "https://images.unsplash.com/photo-1607939594876-fd0f2e8fd033?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8R2FsbGUlMjBEdXRjaCUyMEZvcnR8ZW58MHx8MHx8fDA%3D",
+            "https://images.unsplash.com/photo-1571406761758-9a3eed5338ef?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         ],
         tag: "Culture",
         description: "Explore the beauty of Sri Lanka on a perfectly designed 3 Nights / 4 Days round tour that blends culture, nature, and coastal charm. From the sacred heritage city of Kandy to the cool tea-covered hills of Nuwara Eliya, the scenic landscapes of Ella, and the historic coastline near Galle.",
@@ -65,11 +68,14 @@ export const packages: Package[] = [
         price: "Contact for Price",
         rating: 4.9,
         duration: "8 Days",
-        image: "https://images.unsplash.com/photo-1506665531195-3566af2b4dfa?auto=format&fit=crop&q=100&w=1920",
+        image:
+            "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         gallery: [
-            "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&q=100&w=1200",
-            "https://images.unsplash.com/photo-1528181304800-259b08848526?auto=format&fit=crop&q=100&w=1200",
-            "https://images.unsplash.com/photo-1563492065599-3520f775eeed?auto=format&fit=crop&q=100&w=1200"
+            "https://images.unsplash.com/photo-1503788311183-fa3bf9c4bc32?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "https://images.unsplash.com/photo-1586432994534-2bbb0bb559c3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fFBhdHRheWF8ZW58MHx8MHx8fDA%3D",
+            "https://images.unsplash.com/photo-1712335870501-b70177ef645f?q=80&w=695&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "https://images.unsplash.com/photo-1587535361679-1b93aeb783dd?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8a3JhYmklMjBjaXR5fGVufDB8fDB8fHww",
+            "https://images.unsplash.com/photo-1506665531195-3566af2b4dfa?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8UGhpJTIwUGhpJTIwSXNsYW5kfGVufDB8fDB8fHww",
         ],
         tag: "Adventure",
         description: "Experience the best of Thailand in 8 exciting days across Phuket, Krabi, Pattaya, and Bangkok. Enjoy stunning island tours, crystal-clear beaches, cultural landmarks, thrilling speedboat rides, and vibrant city experiences — all with comfortable stays and smooth transfers for a hassle-free getaway.",
@@ -114,11 +120,13 @@ export const packages: Package[] = [
         price: "Contact for Price",
         rating: 4.8,
         duration: "4 Days",
-        image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=100&w=1920",
+        image: "https://images.unsplash.com/photo-1572025310208-2fd6b91764c1?w=1920&ar=16:9&fit=crop&q=80&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y29yYWwlMjByZWVmcyUyMGxha3NoYWR3ZWVwfGVufDB8MHwwfHx8MA%3D%3D",
         gallery: [
             "https://images.unsplash.com/photo-1544558635-667480601430?auto=format&fit=crop&q=100&w=1200",
-            "https://images.unsplash.com/photo-1506461883276-594a12b11caf?auto=format&fit=crop&q=100&w=1200",
-            "https://images.unsplash.com/photo-1582967788606-a171c1080cb0?auto=format&fit=crop&q=100&w=1200"
+            "https://images.unsplash.com/photo-1683043430721-f4a25e539cd5?q=80&w=1076&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "https://images.unsplash.com/photo-1645453352382-4528c269cd5d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "https://images.unsplash.com/photo-1588472235276-7638965471e2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8a2F5YWtpbmd8ZW58MHwwfDB8fHww",
+
         ],
         tag: "Relaxation",
         description: "Experience the untouched beauty of Lakshadweep on this 3 Nights / 4 Days island escape covering Agatti Island and nearby pristine islands. Enjoy crystal-clear lagoons, white sandy beaches, snorkeling, scuba diving, glass boat rides, and relaxing seaside moments — all with comfortable A/C stay and delicious meals included.",
@@ -159,8 +167,10 @@ export const packages: Package[] = [
         image: "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&q=100&w=1920",
         gallery: [
             "https://images.unsplash.com/photo-1593693397690-362cb9666fc2?auto=format&fit=crop&q=100&w=1200",
-            "https://images.unsplash.com/photo-1596791552097-400d7da664fb?auto=format&fit=crop&q=100&w=1200",
-            "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&q=100&w=1200"
+            "https://images.unsplash.com/photo-1665077491542-dd7aa8be66ae?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fFZhdHRhdmFkYXxlbnwwfHwwfHx8Mg%3D%3D",
+            "https://images.unsplash.com/photo-1675174021331-ad15be36c30e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dGhla2thZHl8ZW58MHx8MHx8fDI%3D",
+            "https://images.unsplash.com/photo-1672219386269-486cbbe9a50f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fE11bm5hcnxlbnwwfHwwfHx8Mg%3D%3D",
+            "https://images.unsplash.com/photo-1577382539020-8305351c9433?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fFZhdHRhdmFkYXxlbnwwfHwwfHx8Mg%3D%3D"
         ],
         tag: "Nature",
         description: "Experience the beauty of Kerala with this perfectly crafted getaway featuring misty hills, serene backwaters, scenic beaches, and rich cultural charm. A relaxing and refreshing journey with comfortable stays and smooth sightseeing.",
@@ -197,11 +207,11 @@ export const packages: Package[] = [
         price: "Contact for Price",
         rating: 4.9,
         duration: "12 Days",
-        image: "https://images.unsplash.com/photo-1566837945700-30057527ade0?auto=format&fit=crop&q=100&w=1920",
+        image: "https://images.unsplash.com/photo-1595815771614-ade9d652a65d?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         gallery: [
             "https://images.unsplash.com/photo-1595815771614-ade9d652a65d?auto=format&fit=crop&q=100&w=1200",
             "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&q=100&w=1200",
-            "https://images.unsplash.com/photo-1606112219348-185b3be2cbad?auto=format&fit=crop&q=100&w=1200"
+            "https://images.unsplash.com/photo-1616190419596-e2839e7380d7?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8amFtbXUlMjBrYXNobWlyfGVufDB8fDB8fHwy"
         ],
         tag: "Adventure",
         description: "Explore the stunning landscapes of Kashmir with this 12-day journey covering Srinagar, Gulmarg, Pahalgam, and Sonamarg. Enjoy Shikara rides, snow-capped mountains, beautiful valleys, and unforgettable Himalayan views — a complete 'Heaven on Earth' experience.",
@@ -247,7 +257,7 @@ export const packages: Package[] = [
         price: "Contact for Price",
         rating: 4.7,
         duration: "3 Days",
-        image: "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&q=100&w=1920",
+        image: "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         gallery: [
             "https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?auto=format&fit=crop&q=100&w=1200",
             "https://images.unsplash.com/photo-1525811902-f2342640856e?auto=format&fit=crop&q=100&w=1200",
@@ -294,7 +304,7 @@ export const packages: Package[] = [
         gallery: [
             "https://images.unsplash.com/photo-1600010977281-22961e6fa9a8?auto=format&fit=crop&q=100&w=1200",
             "https://images.unsplash.com/photo-1622308644420-b8fc4d1f21db?auto=format&fit=crop&q=100&w=1200",
-            "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&q=100&w=1200" 
+            "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&q=100&w=1200"
         ],
         tag: "Culture",
         description: "A 4 Nights & 5 Days spiritual journey from Ernakulam covering Mookambika Temple, Kudajadri, Murudeshwar, Udupi, and Guruvayur. Perfect for families and devotional groups seeking temple darshan with scenic beauty and beach visits.",
