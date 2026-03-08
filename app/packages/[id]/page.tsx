@@ -451,22 +451,26 @@ export default function PackageDetailPage({ params }: { params: Promise<{ id: st
                                 </div>
                             </div>
 
-                            {/* <div className="space-y-4 mb-8">
-                                <div className="p-4 bg-slate-50 rounded-2xl border border-slate-100 flex items-center gap-4">
-                                    <Plane className="w-6 h-6 text-blue-600" />
+                            <div className="space-y-4 mb-8">
+                                <div className="p-4 bg-blue-50/50 rounded-2xl border border-blue-100/50 flex items-center gap-4 group hover:bg-blue-50 transition-colors">
+                                    <div className="p-2 bg-white rounded-xl shadow-sm border border-blue-100 group-hover:scale-110 transition-transform">
+                                        <CheckCircle2 className="w-5 h-5 text-blue-600" />
+                                    </div>
                                     <div className="text-sm">
-                                        <p className="font-bold">Travel safe with Us</p>
-                                        <p className="text-slate-400"></p>
+                                        <p className="font-bold text-slate-800">Ultimate Convenience</p>
+                                        <p className="text-slate-500 text-xs mt-0.5">We handle all the details so you can relax</p>
                                     </div>
                                 </div>
-                                <div className="p-4 bg-slate-50 rounded-2xl border border-slate-100 flex items-center gap-4">
-                                    <ShieldCheck className="w-6 h-6 text-blue-600" />
+                                <div className="p-4 bg-rose-50/50 rounded-2xl border border-rose-100/50 flex items-center gap-4 group hover:bg-rose-50 transition-colors">
+                                    <div className="p-2 bg-white rounded-xl shadow-sm border border-rose-100 group-hover:scale-110 transition-transform">
+                                        <Heart className="w-5 h-5 text-rose-500" />
+                                    </div>
                                     <div className="text-sm">
-                                        <p className="font-bold">Safe Journey</p>
-                                        <p className="text-slate-400">Full insurance & guided support</p>
+                                        <p className="font-bold text-slate-800">Happy Journey</p>
+                                        <p className="text-slate-500 text-xs mt-0.5">Creating experiences and memories you'll love</p>
                                     </div>
                                 </div>
-                            </div> */}
+                            </div> 
 
                             {/* Optional Name Input */}
                             <div className="mb-4">
