@@ -255,7 +255,7 @@ export default function PackageDetailPage({ params }: { params: Promise<{ id: st
                         priority
                     />
                 </div>
-                
+
                 {/* Main Foreground Image (Fully Visible) */}
                 <Image
                     src={pkg.image}
@@ -264,7 +264,7 @@ export default function PackageDetailPage({ params }: { params: Promise<{ id: st
                     className="object-cover"
                     priority
                 />
-                
+
                 <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent" />
                 <div className="absolute inset-0 flex items-end">
                     <div className="max-w-7xl mx-auto px-6 w-full pb-16 relative z-10">
@@ -432,13 +432,12 @@ export default function PackageDetailPage({ params }: { params: Promise<{ id: st
                         <div className="sticky top-32 bg-white rounded-[2.5rem] border border-slate-100 p-8 shadow-xl shadow-slate-200/50">
                             <div className="flex justify-between items-start mb-8">
                                 <div>
-                                    <p className="text-slate-400 text-sm font-bold uppercase tracking-wider mb-1">Price starts at</p>
                                     <p className="text-4xl font-black text-slate-900">{pkg.price}</p>
                                 </div>
                                 <div className="flex gap-2">
-                                    <button className="p-3 bg-slate-50 rounded-2xl hover:bg-slate-100 transition-colors">
+                                    {/* <button className="p-3 bg-slate-50 rounded-2xl hover:bg-slate-100 transition-colors">
                                         <Heart className="w-5 h-5 text-slate-400" />
-                                    </button>
+                                    </button> */}
                                     <button
                                         onClick={handleShare}
                                         title={copied ? "Link copied!" : "Share this package"}
@@ -452,12 +451,12 @@ export default function PackageDetailPage({ params }: { params: Promise<{ id: st
                                 </div>
                             </div>
 
-                            <div className="space-y-4 mb-8">
+                            {/* <div className="space-y-4 mb-8">
                                 <div className="p-4 bg-slate-50 rounded-2xl border border-slate-100 flex items-center gap-4">
                                     <Plane className="w-6 h-6 text-blue-600" />
                                     <div className="text-sm">
-                                        <p className="font-bold">Next Departure</p>
-                                        <p className="text-slate-400">Available from May 15, 2024</p>
+                                        <p className="font-bold">Travel safe with Us</p>
+                                        <p className="text-slate-400"></p>
                                     </div>
                                 </div>
                                 <div className="p-4 bg-slate-50 rounded-2xl border border-slate-100 flex items-center gap-4">
@@ -467,7 +466,7 @@ export default function PackageDetailPage({ params }: { params: Promise<{ id: st
                                         <p className="text-slate-400">Full insurance & guided support</p>
                                     </div>
                                 </div>
-                            </div>
+                            </div> */}
 
                             {/* Optional Name Input */}
                             <div className="mb-4">
