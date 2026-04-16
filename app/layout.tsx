@@ -4,8 +4,12 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "LuxeTravel | Your Gateway to Extraordinary Journeys",
-  description: "Exquisite travel packages and personalized experiences for the modern explorer.",
+  title: "Future Fly Global Ventures",
+  description:
+    "Future Fly Global Ventures delivers customized domestic and international travel solutions — from holiday packages and visa support to flight bookings and complete travel management.",
+  icons: {
+    icon: "/logo.png", // put your logo in public/logo.png
+  },
 };
 
 export default function RootLayout({
