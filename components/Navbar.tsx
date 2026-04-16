@@ -23,7 +23,7 @@ export default function Navbar() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
                 <Link href="/" className="flex items-center gap-2 z-50">
                     <Image
-                        src="/logo1.jpg"
+                        src="/logo1.png"
                         alt="Logo"
                         width={120}
                         height={40}

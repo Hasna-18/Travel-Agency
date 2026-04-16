@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     "Future Fly Global Ventures delivers customized domestic and international travel solutions — from holiday packages and visa support to flight bookings and complete travel management.",
   icons: {
-    icon: "/logo.png", // put your logo in public/logo.png
+    icon: "/logo1.png", // put your logo in public/logo.png
   },
 };
 
